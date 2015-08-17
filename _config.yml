@@ -14,5 +14,5 @@ github_username:  dummied
 markdown: kramdown
 
 sass:
-  sass_dir:          _scss
+  sass_dir:          _sass
   style:            :compressed
