@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="home">
+  <a href="#policies" class="right">Jump to class policies ⇣</a>
+
+  {% include_relative README.htm %}
+
+  <ul class="post-list" id="policies">
+    {% for post in site.posts %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
