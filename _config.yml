@@ -12,3 +12,7 @@ github_username:  dummied
 
 # Build settings
 markdown: kramdown
+
+sass:
+  sass_dir:          _scss
+  style:            :compressed
