@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   The Iron Yard Indianapolis Ruby on Rails Engineering course kicks off
   in the fall of 2015. This site contains (ideally) all the information you need
   before class starts.
-baseurl: "/prework/" # the subpath of your site, e.g. /blog/
+baseurl: "/course_notes/prework/" # the subpath of your site, e.g. /blog/
 url: "http://the-iron-yard-indy-ror-oct-2015.github.io" # the base hostname & protocol for your site
 twitter_username: chris_vannoy
 github_username:  dummied
