@@ -5,11 +5,19 @@ class Game
   def play
     puts "Hi. Let's play Rock, Paper, Scissors. 1, 2, 3 ... SHOOT!"
     self.computer = %w(rock paper scissors).sample
-    self.player_one_choice = STDIN.gets.chomp
+    player_pick
     if round == "tie"
       puts "Player: #{player_one_choice.upcase} vs Computer: #{computer.upcase} ----- TIE"
     else
       puts "Player: #{player_one_choice.upcase} vs Computer: #{computer.upcase} ----- #{round.upcase} WINS"
+    end
+  end
+
+  def player_pick
+    self.player_one_choice = STDIN.gets.chomp.downcase
+    until %w(rock paper scissors).include?(player_one_choice)
+      puts "Please pick one of rock, paper, or scissors (and, yes, case matters)"
+      self.player_one_choice = STDIN.gets.chomp.downcase
     end
   end
 
