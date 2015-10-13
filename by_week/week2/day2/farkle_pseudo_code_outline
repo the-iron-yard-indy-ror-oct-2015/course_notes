@@ -1,0 +1,24 @@
+
+until computer_total >= 100 || player_total >= 100
+  puts "Roll now!"
+  computer = 20
+  player = 23
+  computer_total = computer
+  player_total = player
+  puts "You rolled a total of #{player}. The computer rolled #{computer}"
+
+end
+
+if computer_total > player_total
+
+elsif
+
+else
+
+end
+
+die.rb
+game.rb
+
+game = Game.new
+game.play
