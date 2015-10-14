@@ -1,0 +1,57 @@
+IMPORTANT: Don't copy and paste _anything_ in here.
+Feel free to look at it and use it, but at least retype it.
+
+
+class Card
+
+  attr_accessor :suit, :face, :value
+
+  def initialize(face, suit)
+    self.suit = suit
+    self.face = face
+    if face == "Ace"
+      self.value = 14
+    elsif face == "King"
+      self.value = 13
+      ...
+    else
+      self.value = face.to_i
+    end
+  end
+
+  def >(card)
+    self.value > card.value
+  end
+
+end
+
+class Deck
+
+  attr_accessor :cards
+
+  def initialize
+    possible_cards = %w(2 3 4 5 6 7 8 9 10 Jack Queen King Ace)
+    possible_suits = %w(Clubs Spades Diamonds Hearts)
+    self.cards = []
+    possible_suits.each do |suit|
+      possible_cards.each do |face|
+        self.cards << Card.new(face, suit)
+      end
+    end
+
+  end
+
+end
+
+
+class Game
+
+  attr_accessor :player_hand, :computer_hand, :player_winnings, :computer_winnings
+
+  def initialize
+    deck = Deck.new.cards.shuffle
+    self.player_hand =
+    self.computer_hand =
+  end
+
+end
