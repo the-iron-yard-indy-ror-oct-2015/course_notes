@@ -1,0 +1,34 @@
+SUGGESTED STRUCTURE. FEEL FREE TO GO YOUR OWN WAY.
+
+game.rb
+card.rb
+deck.rb
+player.rb
+
+game.rb
+class Game
+
+  attr_accessor :player_one, :player_two
+
+end
+
+player.rb
+class Player
+
+  attr_accessor :deck, :name, :winnings
+
+end
+
+deck.rb
+class Deck
+
+  attr_accessor :cards
+
+end
+
+card.rb
+class Card
+
+  attr_accessor :face, :suit, :value
+
+end
