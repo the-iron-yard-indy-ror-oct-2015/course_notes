@@ -1,0 +1,165 @@
+*{
+  font-family: Helvetica;
+}
+
+.jumbotron{
+  background-image: url("images/Cornballs-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:400px;
+}
+.logo img{
+  max-height:100px;
+}
+.logo{
+  color:white;
+}
+.white{
+  color:white;
+}
+h1.band-name {
+  color:#fff;
+  font-family: Helvetica;
+}
+.author-pic{
+  height:20px;
+}
+.headline{
+  font-size:60px;
+}
+.main-content{
+  padding-right: 5%;
+}
+.profile{
+  margin-top:3px;
+
+}
+.profile-pic{
+  width:25%;
+  height:auto;
+  border-radius: 100%;
+
+}
+.social-profile a{
+  font-size: .6em;
+  color:#606060;
+  font-weight: bold;
+}
+.advertisement{
+  margin-top:20px;
+}
+.nav li a {
+  color:#fff;
+
+}
+p{
+  font-family: Garamond,serif;
+  font-size: 1.2em;
+}
+.nav li a:hover{
+  background-color: #A1A1A3;
+}
+.sidebar{
+  margin-left: 25px;
+}
+.sidebar p{
+  font-size:1em;
+  color:#c0c0c0;
+}
+.article-options{
+  margin-top:25px;
+}
+.article-options .btn{
+  margin-left:5px;
+  background-color: #6FA1CC;
+  border-radius: 0;
+  text-align: center;
+}
+
+.article-options .btn:hover{
+  background-color: #416497;
+  color:white;
+}
+.content-separator{
+  border-top:1px solid #c0c0c0;
+  margin-top:25px
+}
+.content-separator h1{
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.other-products{
+  padding: 0;
+
+}
+.other-products div, .other-products div img{
+  height:200px;
+  color: #000;
+}
+.other-products div h1{
+  position:absolute;
+  bottom:0;
+
+}
+.other-products>div{
+  padding:0;
+
+}
+.product1{
+  background-image: url("images/home.png");
+  background-size: cover;
+}
+.product2{
+  background-image: url("images/boyfights.png");
+  background-size: cover;
+}
+.product3{
+  background-image: url("images/cookout-boyfights.png");
+  background-size: cover;
+}
+.product4{
+  background-image: url("images/backseat-boyfights.png");
+  background-size: cover;
+  padding:0;
+}
+.overlay {
+    background-color: rgba(111,161,204,.7);
+    width:100%;
+}
+.overlay:hover{
+    background-color: rgba(0, 0, 50, 0.0);
+    color:#fff;
+}
+footer{
+  background-color: #415A92;
+}
+.footer-logo img{
+  height: 50px;
+  margin: 20px 0;
+  display: inline;
+}
+.footer-logo p{
+  color:#c0c0c0;
+  display: inline;
+}
+.footer-nav li{
+  border-left:navy solid 1px;
+  margin-top: 35px;
+  display: inline-block;
+}
+
+.footer-nav li a{
+  padding-top:0;
+  padding-bottom:0;
+  color:#c0c0c0;
+}
+.footer-nav li:first-child{
+  border:none;
+}
+.nav-tabs, .nav-pills {
+  text-align:center;
+}
+.nav-tabs > li, .nav-pills > li {
+  float:none;
+  display:inline-block;
+}
