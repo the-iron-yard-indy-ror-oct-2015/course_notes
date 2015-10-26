@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <div class = "jumbotron">
+    <div class = "row">
+      <div class="col-xs-1 logo hidden-xs hidden-sm"></div>
+      <div class = "col-xs-3 logo hidden-xs hidden-sm">
+        <div class="col-xs-5">
+          <img class= "img-responsive" src="/images/cornballer-logo.png"/>
+        </div>
+        <div class="col-xs-7">
+          <h6 class="text-left">A Bluth Product</h6>
+        </div>
+      </div>
+      <div class="col-xs-5 logo hidden-xs"></div>
+      <div class="col-md-3 col-sm-12">
+        <ul class="nav nav-pills text-center">
+          <li role="presentation"><a href = "#">ABOUT</a></li>
+          <li role="presentation"><a href = "#">SEARCH <span class="glyphicon glyphicon-search white"></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hidden-lg hidden-md col-12-xs">
+      <img class= "img-responsive center-block" src="images/cornballer-logo.png"/>
+    </div>
+    <div class ="row">
+      <h1 class = "col-xs-12 text-center band-name"><%= params['headline'] %></h1>
+    </div>
+  </div>
+  <div class = "container">
+    <div class="col-xs-1"></div>
+    <div class="col-md-7 col-lg-7 col-sm-12 main-content">
+      <div class="row">
+        <h1 class="headline">Cornballer Declared Safe* by FDA!</h1>
+        <div class="row">
+          <div class="col-xs-1">
+            <img class = "img-circle center-block author-pic" src="http://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/7/7f/77f1c360-8e29-5ba3-8b16-0ecbe45556ab/519fb75fd5b4f.preview-620.jpg"/>
+          </div>
+          <div class="col-xs-11 text-left">
+            <p><a href="#">George Bluth</a> on October 22, 2015</p>
+          </div>
+        </div>
+        <p>You're losing blood, aren't you? Probably, my socks are wet. I've been in the film business for a while but I just can't seem to get one in the can. Make love in your *own* hand, Mother! "Circumvent." It means "to go around." Gob: The old "reach around." Wow. We're just blowing through nap time, aren't we? What's gotten into you? Have you been eating cheese? Hahahahah! I just dont want him to point out my cracker ass in front of Ann.</p>
+
+        <p>Annyong. Oh...yeah...the guy in the...the $4,000 suit is holding the elevator for a guy who doesn't make that in three months. Come on! Why are you squeezing me with your body? It's a hug, Michael. I'm hugging you. It's as Ann as the nose on Plain's face. You stay on top of her, Buddy. Don't be afraid to ride her. Hard.</p>
+
+        <p>It walked on my pillow! I hear the jury's still out on science. I call it Tricks ... wait for it ... Around The Office. Everybody dance... NOW. I'm tired of trying to find happiness through lies and self-medicating. If you need me, I'll be at the bar.</p>
+
+        <p>Say something that will terrify me. Lindsay: F*** me. Tobias: No, that didn't do it. Can you believe that the only reason the club is going under is because it's in a terrifying neighborhood? That coat costs more than your house! Tobias Fünke costume. You were just a turd out there, you know? You couldn't kick, and you couldn't run, you know? You were just a turd.</p>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 article-options">
+          <div class="col-xs-3 btn btn-default" type="button"><span class="glyphicon glyphicon-comment"></span> View Comments</div>
+          <div class="col-xs-3 btn btn-default" type="button"><span class="glyphicon glyphicon-cloud-upload"></span> Read Later</div>
+          <div class="col-xs-3 btn btn-default" type="button"><span class="glyphicon glyphicon-share-alt"></span> Share Post</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 sidebar">
+      <div class=row>
+        <img class = "img-circle center-block profile-pic" src="http://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/7/7f/77f1c360-8e29-5ba3-8b16-0ecbe45556ab/519fb75fd5b4f.preview-620.jpg"/>
+        <h3 class = "text-center profile">George Bluth</h3>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-3 social-profile text-center"><a>Twitter</a>
+        </div>
+        <div class="col-xs-3 social-profile text-center"><a>Facebook</a>
+        </div>
+        <div class="col-xs-3 social-profile text-center"><a>Instagram</a>
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+      <div class="row">
+        <a href = "#"><img src="/images/cornball-ad.jpg" class= "col-xs-12 advertisement img-responsive"/></a>
+      </div>
+      <div class="row">
+        <a href= "#"><div class= "col-xs-12 text-right"/>about this add</div></a>
+      </div>
+      <div class="row">
+        <h3>Michael Bluth Discourages Use of Cornballer</h3>
+        <p>It walked on my pillow! I hear the jury's still out on science. I call it Tricks ... wait for it ... Around The Office. Everybody dance... NOW. I'm tired of trying to find happiness through lies and self-medicating. If you need me, I'll be at the bar.</p>
+      </div>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+  <div class="container content-separator">
+    <div class="col-xs-12 text-center">
+      <h1>OTHER POPULAR PRODUCTS!</h1>
+    </div>
+  </div>
+  <div class="container-fluid other-products">
+    <% posts.each do |post| %>
+    <div class="col-lg-3 col-md-3 col-sm-12 <%= post[:class] %>">
+      <div class="col-lg-3 col-md-3 col-sm-12  overlay">
+        <h1 class="text-capitalize"><%= post[:text] %></h1>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <footer class="container-fluid">
+    <div class="col-xs-1"></div>
+    <div class="ccol-lg-4 col-md-4 col-sm-12  footer-logo">
+      <img class="img-responsive" src="/images/mr-banana-grabber.png"/>
+      <p>Bluth Industries</p>
+    </div>
+    <div class="col-xs-2"></div>
+    <div class="col-lg-5 col-md-5 col-sm-12  container-fluid">
+      <ul class="nav navbar-nav footer-nav">
+        <li><a href="#">link1</a></li>
+        <li><a href="#">link2</a></li>
+        <li><a href="#">link3</a></li>
+        <li><a href="#">link4</a></li>
+        <li><a href="#">link5</a></li>
+    </div>
+  </footer>
+</body>
+
+
+</html>
