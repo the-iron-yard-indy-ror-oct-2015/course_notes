@@ -28,14 +28,14 @@
       <img class= "img-responsive center-block" src="images/cornballer-logo.png"/>
     </div>
     <div class ="row">
-      <h1 class = "col-xs-12 text-center band-name"><%= params['headline'] %></h1>
+      <h1 class = "col-xs-12 text-center band-name"><%= @headline %></h1>
     </div>
   </div>
   <div class = "container">
     <div class="col-xs-1"></div>
     <div class="col-md-7 col-lg-7 col-sm-12 main-content">
       <div class="row">
-        <h1 class="headline">Cornballer Declared Safe* by FDA!</h1>
+        <h1 class="headline"><%= @headline %></h1>
         <div class="row">
           <div class="col-xs-1">
             <img class = "img-circle center-block author-pic" src="http://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/7/7f/77f1c360-8e29-5ba3-8b16-0ecbe45556ab/519fb75fd5b4f.preview-620.jpg"/>
@@ -92,7 +92,7 @@
     </div>
   </div>
   <div class="container-fluid other-products">
-    <% posts.each do |post| %>
+    <% @posts.each do |post| %>
     <div class="col-lg-3 col-md-3 col-sm-12 <%= post[:class] %>">
       <div class="col-lg-3 col-md-3 col-sm-12  overlay">
         <h1 class="text-capitalize"><%= post[:text] %></h1>
