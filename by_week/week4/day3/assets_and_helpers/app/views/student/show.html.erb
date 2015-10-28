@@ -1,0 +1,4 @@
+<h1>The student's name is <%= @student %></h1>
+
+<%= link_to "Praise #{@student}", praise_path(:name => @student) %>
+<%= link_to "Back", root_path %>

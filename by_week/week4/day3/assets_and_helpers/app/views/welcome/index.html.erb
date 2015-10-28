@@ -1,0 +1,7 @@
+<%= image_tag "dog_on_phone.gif", :alt => "Dawg" %>
+
+<ul>
+  <% @students.each do |student| %>
+    <li><%= link_to student, student_path(:name => student) %></li>
+  <% end %>
+</ul>
