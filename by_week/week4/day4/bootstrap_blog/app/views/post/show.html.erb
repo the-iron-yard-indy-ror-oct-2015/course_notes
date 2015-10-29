@@ -1,0 +1,8 @@
+<h1><%= @post.title %></h1>
+
+<p class="post_meta">Written by <%= @post.author %> on <%= @post.created_at %></p>
+
+<%= simple_format(@post.body) %>
+
+<%= link_to "Home", root_path %>
+

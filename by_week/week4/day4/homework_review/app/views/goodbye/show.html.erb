@@ -1,0 +1,9 @@
+<h1>Goobye, <%= @person %></h1>
+
+<p>Pick your favorite color:</p>
+
+<ul>
+  <% @colors.each do |c| %>
+    <li><%= link_to c.to_name, root_path(:color => c.to_name) %></li>
+  <% end %>
+</ul>
