@@ -1,15 +1,13 @@
+<h1><%= @post.title %></h1>
+<h6>Posted by <%= @post.author %> on <%= @post.created_at.to_s(:long) %></h6>
+  <%= simple_format(@post.body) %>
+
 <% @posts.each do |p| %>
   <div class="post-preview">
       <a href="<%= post_path(:id => p.id) %>">
             <h2 class="post-title">
               <%= p.title %>
             </h2>
-            <h3 class="post-subtitle">
-              <%= p.summary %>
-            </h3>
         </a>
-        <p class="post-meta">Posted by <a href="#"><%= p.author %></a> on <%= p.created_at %></p>
     </div>
-    <hr>
   <% end %>
-
