@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
    get 'posts/:id' => 'post#show', :as => :post
 
+  #  get 'params_show/:thingee' => 'post#params_show'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

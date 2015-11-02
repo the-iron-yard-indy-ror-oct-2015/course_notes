@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get 'sgergwesg/:name' => 'goodbye#show', :as => :goodbye
+  get 'nyet/:name' => 'goodbye#show', :as => :goodbye
 
   get 'moppnt/:id' => 'goodbye#mop'
 
