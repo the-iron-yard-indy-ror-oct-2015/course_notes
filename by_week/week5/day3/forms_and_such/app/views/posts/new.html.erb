@@ -1,0 +1,13 @@
+<% if params[:action] == "new" || params[:action] == "create" %>
+  <h1>New post</h1>
+<% else %>
+  <h1>Edit post</h1>
+<% end %>
+
+<%= form_for @post, html: {class: "nifty_form"} do |f| %>
+<div class="form_group">
+  <%= f.text_field :title %>
+</div>
+  <%= f.text_area :body, size: "60x12" %>
+  <%= f.submit "Save" %>
+<% end %>
