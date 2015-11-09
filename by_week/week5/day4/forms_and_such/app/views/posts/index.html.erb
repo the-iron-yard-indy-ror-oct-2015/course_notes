@@ -1,0 +1,9 @@
+<% if @posts.blank? %>
+  <h1>Add some posts, dummy</h1>
+<% else %>
+  <ul>
+    <% @posts.each do |p| %>
+      <li><%= link_to p.title, p %> - <%= button_to "Delete", post_path(p), :method => "delete" %> </li>
+    <% end %>
+  </ul>
+<% end %>
