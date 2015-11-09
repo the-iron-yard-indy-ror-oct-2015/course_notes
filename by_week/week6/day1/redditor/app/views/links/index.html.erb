@@ -1,0 +1,14 @@
+<% @links.each do |link| %>
+  <div class="row">
+    <div class="col-xs-3">
+      <%= button_to "+1", link_votes_path(link), :class => "btn btn-primary" %>
+      <h6><%= link.votes.sum(:value) %></h6>
+      <%= button_to "-1", link_votes_path(link, :downvote => true), :class => "btn btn-primary" %>
+    </div>
+    <div class="col-xs-9">
+      <h3><%= link_to link.title, click_link_path(link) %></h3>
+      <%= simple_format(link.summary) %>
+      <p class="meta"><%= link_to "Edit this link", edit_link_path(link) %></p>
+    </div>
+  </div>
+<% end %>
