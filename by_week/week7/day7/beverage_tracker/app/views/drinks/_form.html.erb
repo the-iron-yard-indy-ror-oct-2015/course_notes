@@ -1,0 +1,6 @@
+<%= bootstrap_form_for(@drink, remote: true) do |f| %>
+  <%= f.text_field :name, :class => "name_field" %>
+  <%= f.number_field :quantity %>
+  <%= f.date_field :date %>
+  <%= f.submit %>
+<% end %>
