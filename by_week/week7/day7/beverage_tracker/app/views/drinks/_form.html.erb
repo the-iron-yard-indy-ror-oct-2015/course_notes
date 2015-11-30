@@ -1,4 +1,6 @@
-<%= bootstrap_form_for(@drink, remote: true) do |f| %>
+<%= bootstrap_form_for(@drink, remote: true, authenticity_token: true) do |f| %>
+  <%= f.text_field :url_of_image %>
+  <%= f.attachment_field :image, direct: true %>
   <%= f.text_field :name, :class => "name_field" %>
   <%= f.number_field :quantity %>
   <%= f.date_field :date %>

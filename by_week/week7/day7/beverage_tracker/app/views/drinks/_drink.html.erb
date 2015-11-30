@@ -10,6 +10,9 @@
       </div>
       <div class="modal-body">
         <h2><%= pluralize(drink.quantity, drink.name) %></h2>
+        <% if drink.proper_image_url %>
+          <%= image_tag drink.proper_image_url, :class => "img-responsive" %>
+        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
