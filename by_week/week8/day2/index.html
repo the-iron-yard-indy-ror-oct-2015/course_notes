@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+  <body>
+    <h1>Repos</h1>
+    <ul id="repos"></ul>
+    <h1>Avengers</h1>
+    <ul id="comics"></ul>
+    <script type="text/javascript">
+      $.ajax({
+        url: 'https://api.github.com/orgs/the-iron-yard-indy-ror-oct-2015/repos'
+      }).done(function(data){
+        $.each(data, function(index, repo){
+          console.log(repo);
+          $('#repos').prepend("<li><a href='" + repo.html_url + "'>" + repo.name + "</a></li>");
+        })
+      });
+      $.ajax({
+        url: "https://gateway.marvel.com:443/v1/public/characters?limit=50&series=354&apikey=<API_KEY>"
+      }).done(function(data){
+        $.each(data.data.results, function(index, character){
+          $('#comics').prepend("<img src='" + character.thumbnail.path + "." + character.thumbnail.extension + "'/>");
+        })
+      });
+    </script>
+  </body>
+</html>
