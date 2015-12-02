@@ -1,0 +1,37 @@
+<h1><%= @message %></h1>
+
+<%= form_tag("/", :method => :get) do %>
+  <%= text_field_tag "hero", params["hero"] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<% if params[:hero] %>
+<div class="row" id="content">
+  <div class="col-xs-3">
+    <% if @hero.is_a? String %>
+      <h4><%= @hero %></h4>
+    <% else %>
+      <%= image_tag "#{@hero["thumbnail"]["path"]}.#{@hero["thumbnail"]["extension"]}", :class => "img-responsive" %>
+      <h4><%= @hero["name"] %></h4>
+      <%= simple_format @hero["description"] %>
+      <% if @hero["series"]["items"].any? %>
+        <ul>
+          <% @hero["series"]["items"].each do |series| %>
+            <li><%= series["name"] %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-xs-9">
+    <% if @repos.any? %>
+      <% @repos.each do |r| %>
+        <h4><%= link_to r[:full_name], r[:html_url] %> - <%= r[:stargazers_count] %> <i class="glyphicon glyphicon-star"></i>'s</h4>
+        <%= simple_format(truncate(r[:description], length: 500)) %>
+      <% end %>
+    <% else %>
+      <h2>We couldn't find any repos related to <%= params["hero"] %></h2>
+    <% end %>
+  </div>
+</div>
+<% end %>
