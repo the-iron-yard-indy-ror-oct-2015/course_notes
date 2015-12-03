@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Indy Rubyists!</h1>
+  <% @users.each do |user| %>
+    <div class="row">
+      <h4><%= link_to user[:name], user[:html_url] %></h4>
+      <p>Member since: <%= user[:created_at].to_date.to_s(:long) %> :: <%= pluralize(user[:public_repos], "repo") %> :: <%= pluralize(user[:followers], "follower") %></p>
+    </div>
+  <% end %>
+</div>
