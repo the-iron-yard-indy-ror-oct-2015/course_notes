@@ -9,4 +9,9 @@ class CodersController < ApplicationController
     @users = @all_users[:items].collect{|u| Octokit.user(u[:id])}
   end
 
+  def show
+    @user = Octokit.user(params[:id])
+    @events = Octokit.user_events(params[:id])
+  end
+
 end

@@ -1,0 +1,6 @@
+<div class="container">
+  <h1><%= @user[:name] %>'s recent events</h1>
+  <% @events.each do |event| %>
+    <%= event.inspect %>
+  <% end %>
+</div>
