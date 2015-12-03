@@ -2,8 +2,13 @@
   <h1>Indy Rubyists!</h1>
   <% @users.each do |user| %>
     <div class="row">
-      <h4><%= link_to user[:name], user[:html_url] %></h4>
-      <p>Member since: <%= user[:created_at].to_date.to_s(:long) %> :: <%= pluralize(user[:public_repos], "repo") %> :: <%= pluralize(user[:followers], "follower") %></p>
+      <div class="col-xs-1">
+        <%= image_tag user[:avatar_url], :class => "img-responsive" %>
+      </div>
+      <div class="col-xs-11">
+        <h4><%= link_to user[:name], user[:html_url] %></h4>
+        <p>Member since: <%= user[:created_at].to_date.to_s(:long) %> :: <%= pluralize(user[:public_repos], "repo") %> :: <%= pluralize(user[:followers], "follower") %></p>
+      </div>
     </div>
   <% end %>
   <%= paginate @all_users %>

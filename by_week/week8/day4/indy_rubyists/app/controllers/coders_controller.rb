@@ -2,7 +2,7 @@ class CodersController < ApplicationController
 
   def index
     @all_users = Octokit.search_users(
-              "location:Indianapolis language:Ruby",
+              "location:Indianapolis language:Ruby type:User",
               :sort => "joined",
               :order => :asc,
               :page => params[:page])
