@@ -10,8 +10,8 @@ class CodersController < ApplicationController
   end
 
   def show
-    @user = Octokit.user(params[:id])
-    @events = Octokit.user_events(params[:id])
+    @user = Octokit.user(params[:login])
+    @events = Octokit.user_events(params[:login])
   end
 
 end

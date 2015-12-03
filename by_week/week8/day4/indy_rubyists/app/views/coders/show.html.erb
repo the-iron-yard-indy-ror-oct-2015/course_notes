@@ -1,6 +1,8 @@
 <div class="container">
   <h1><%= @user[:name] %>'s recent events</h1>
+  <ul>
   <% @events.each do |event| %>
-    <%= event.inspect %>
+    <li><%= event[:type] %></li>
   <% end %>
+</ul>
 </div>
