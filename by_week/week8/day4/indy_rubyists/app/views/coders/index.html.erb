@@ -6,4 +6,5 @@
       <p>Member since: <%= user[:created_at].to_date.to_s(:long) %> :: <%= pluralize(user[:public_repos], "repo") %> :: <%= pluralize(user[:followers], "follower") %></p>
     </div>
   <% end %>
+  <%= paginate @all_users %>
 </div>
