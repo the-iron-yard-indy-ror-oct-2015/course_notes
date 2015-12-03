@@ -3,6 +3,12 @@ class DrinksController < ApplicationController
   def index
     @drinks = Drink.order("date DESC")
     @drink = Drink.new
+    respond_to do |format|
+      format.html {}
+      format.json {
+        render :json => @drinks.to_json
+      }
+    end
   end
 
   def show
