@@ -1,0 +1,7 @@
+<%= bootstrap_form_for(@user) do |f| %>
+  <%= f.text_field :email %>
+  <%= f.password_field :password %>
+  <%= f.text_field :name %>
+  <%= f.text_area :bio %>
+  <%= f.submit %>
+<% end %>
