@@ -1,4 +1,7 @@
-<%= bootstrap_form_for(@user) do |f| %>
+<div class="page-header">
+  <h1>Sign up for an account <small>and start managing your daycare today</small></h1>
+</div>
+<%= bootstrap_form_for(@user, :url => daycare_sign_up_path) do |f| %>
   <%= f.text_field :email %>
   <%= f.password_field :password %>
   <%= f.text_field :name %>

@@ -12,20 +12,9 @@ class UserDashboard < Administrate::BaseDashboard
     email: Field::String,
     name: Field::String,
     bio: Field::Text,
-    crypted_password: Field::String,
-    password_salt: Field::String,
-    persistence_token: Field::String,
-    single_access_token: Field::String,
-    perishable_token: Field::String,
-    login_count: Field::Number,
-    failed_login_count: Field::Number,
-    last_request_at: Field::DateTime,
-    current_login_at: Field::DateTime,
-    last_login_at: Field::DateTime,
-    current_login_ip: Field::String,
-    last_login_ip: Field::String,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    password: Field::String,
+    password_confirmation: Field::String,
+    role: Field::String
   }
 
   # COLLECTION_ATTRIBUTES
@@ -38,6 +27,7 @@ class UserDashboard < Administrate::BaseDashboard
     :email,
     :name,
     :bio,
+    :role
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -45,7 +35,8 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :email,
     :name,
-    :bio
+    :bio,
+    :role
     ]
 
   # FORM_ATTRIBUTES
@@ -54,13 +45,16 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :email,
     :name,
-    :bio
+    :bio,
+    :password,
+    :password_confirmation,
+    :role
     ]
 
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(user)
-  #   "User ##{user.id}"
-  # end
+  def display_resource(user)
+    user.name
+  end
 end
