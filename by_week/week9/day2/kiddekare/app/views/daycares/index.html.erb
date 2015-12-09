@@ -1,7 +1,7 @@
 <div class="row">
 <% @daycares.each do |daycare| %>
   <div class="col-xs-4">
-      <h2><%= daycare.name %></h2>
+      <h2><%= link_to daycare.name, daycare %></h2>
       <h6>Rooms available</h6>
       <ul>
         <% daycare.rooms.each do |room| %>

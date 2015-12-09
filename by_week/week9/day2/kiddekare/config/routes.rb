@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Payola::Engine => '/payola', as: :payola
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
       resources dashboard_resource
@@ -12,11 +13,14 @@ Rails.application.routes.draw do
   resources :daycares
   resources :users
   resources :user_sessions, :only => [:new, :create, :destroy]
+  resources :subscriptions, :only => [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'daycares#index'
+
+  post '/users/daycare' => 'users#customer_create', as: :daycare_sign_up
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

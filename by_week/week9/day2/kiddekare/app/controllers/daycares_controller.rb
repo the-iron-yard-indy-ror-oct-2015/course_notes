@@ -4,4 +4,8 @@ class DaycaresController < ApplicationController
     @daycares = Daycare.all
   end
 
+  def show
+    @daycare = Daycare.friendly.find(params[:id])
+  end
+
 end

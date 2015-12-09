@@ -8,9 +8,16 @@
 </head>
 <body>
 <div class="container">
-  <% if current_user %>
-    <%= button_to "Log out", user_session_path(current_user.id), class: "btn btn-large", method: :delete %>
-  <% end %>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <% if current_user %>
+        <%= button_to "Log out", user_session_path(current_user.id), class: "btn btn-large", method: :delete %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path, class: "btn btn-large btn-primary" %>
+        <%= link_to "Sign up", new_user_path(:role => "daycare_administrator"), class: "btn btn-large btn-primary" %>
+      <% end %>
+    </div>
+  </nav>
   <%= yield %>
 </div>
 

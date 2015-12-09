@@ -14,6 +14,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def customer_create
+    @user = User.new(user_params)
+    @user.password_confirmation = @user.password
+    @user.role = "daycare_administrator"
+    if @user.save
+      redirect_to new_subscription_path
+    else
+      render :new
+    end
+  end
+
   private
 
   def user_params
